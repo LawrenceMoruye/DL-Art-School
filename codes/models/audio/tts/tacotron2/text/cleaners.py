@@ -15,7 +15,7 @@ hyperparameter. Some cleaners are English-specific. You'll typically want to use
 import re
 from unidecode import unidecode
 from .numbers import normalize_numbers
-from german_transliterate.core import GermanTransliterate
+#from german_transliterate.core import GermanTransliterate
 
 
 # Regular expression matching whitespace:
@@ -83,7 +83,7 @@ def transliteration_cleaners(text):
 
 def english_cleaners(text):
   '''Pipeline for English text, including number and abbreviation expansion.'''
-  text = GermanTransliterate().transliterate(text)
+  #text = GermanTransliterate().transliterate(text)
   text = lowercase(text)
   text = collapse_whitespace(text)
   text = text.replace('"', '')
